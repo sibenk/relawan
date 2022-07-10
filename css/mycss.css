@@ -1,0 +1,45 @@
+.slider h3,
+.slider h5,
+.agenda h3 {
+    color: aliceblue;
+    text-shadow: 1px 1px 3px rgb(0,0,0,0.8);
+}
+.slider img {
+    height: 100%;
+}
+.history h3,
+.agenda h3,
+.galeri h3 {
+    font-weight: bold;
+    font-family: cursive;
+    text-shadow: 1px 1px 3px rgb(0,0,0,0.8);
+}
+.history p {
+    text-align: justify;
+}
+.parallax-container {
+    height: 380px;
+}
+.parallax-container p {
+    color: white;
+    text-shadow: 1px 1px 3px rgb(0,0,0,0.8);
+}
+.parallax img {
+    filter: grayscale(1);
+    opacity: 0.5 !important;
+}
+/* .parallax button {
+    text-decoration: none;
+    color: white;
+} */
+.section {
+    padding: 20px 0;
+}
+.agenda img {
+    max-width: 150px;
+    filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.8));
+}
+section, footer {
+    padding: 20px;
+}
+
