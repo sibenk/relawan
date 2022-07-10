@@ -82,11 +82,11 @@
                 </ul>
               </div>
               <div class="col m7 s12">
-                <form action="">
+                <form action="" id="form-pendaftaran">
                   <div class="card-panel">
                     <h5>Silahkan Isi Form untuk Mendaftar</h5>
                     <div class="input-field">
-                      <input type="text" name="name" id="name" required class="validate">
+                      <input type="text" name="nama" id="name" required class="validate">
                       <label for="name">Nama</label>
                     </div>
                     <div class="input-field">
@@ -94,11 +94,11 @@
                       <label for="nik">NIK KTP</label>
                     </div>
                     <div class="input-field">
-                      <input type="text" name="address" id="address" required class="validate">
+                      <input type="text" name="alamat" id="address" required class="validate">
                       <label for="address">Alamat dan Kecamatan</label>
                     </div>
                     <div class="input-field">
-                      <input type="text" name="phone" id="phone" required class="validate">
+                      <input type="text" name="telphon" id="phone" required class="validate">
                       <label for="phone">No. Telphon</label>
                     </div>
                     <div class="input-field">
@@ -156,5 +156,16 @@
           M.Materialbox.init(materialbox);
   
         </script>
+      <script>
+          const scriptURL = 'https://script.google.com/macros/s/AKfycbwgT0r4P8_CmVf0QmkslFbrLVJiK6-SdtLCUbvZJZ1AVu2RybSYkmmgdobfxeY9aPNh/exec';
+          const form = document.forms['form-pendaftaran'];
+
+          form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+              .then(response => console.log('Success!', response))
+              .catch(error => console.error('Error!', error.message))
+          })
+</script>
       </body>
     </html>
